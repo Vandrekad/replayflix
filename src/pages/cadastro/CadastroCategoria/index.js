@@ -29,7 +29,9 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    const URL = 'http://localhost:8080/categorias';
+    const URL = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categorias'
+      : 'https://replayflix.herokuapp.com/categorias';
 
     fetch(URL)
       .then(async (serverAnswer) => {
