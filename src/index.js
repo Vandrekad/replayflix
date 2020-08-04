@@ -10,13 +10,11 @@ import CadastroCategoria from './pages/cadastro/CadastroCategoria';
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path='/' component={Home} exact/>
-      <Route path='/cadastro/video' component={CadastroVideo}/>
-      <Route path='/cadastro/categoria' component={CadastroCategoria}/>
-      <Route component={()=>(<div><h1>Pagina 404</h1></div>)}/>
+      <Route path="/" component={Home} exact />
+      <Route path="/cadastro/video" component={CadastroVideo} />
+      <Route path="/cadastro/categoria" component={CadastroCategoria} />
+      <Route component={() => (<div><h1>Pagina 404</h1></div>)} />
     </Switch>
   </BrowserRouter>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
-
-

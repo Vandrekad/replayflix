@@ -7,12 +7,12 @@ import PageDefault from '../../components/PageDefault';
 
 function Home() {
   return (
-    <div style={{background:"#141414"}}>
+    <div style={{ background: '#20232a' }}>
       <PageDefault>
         <BannerMain
-          videosTitle = {dadosIniciais.categorias[0].videos[0].titulo}
-          url = {dadosIniciais.categorias[0].videos[0].url}
-          videoDescription = {"O que é Front-End ? Trabalhando na área."}
+          videosTitle={dadosIniciais.categorias[0].videos[0].titulo}
+          url={dadosIniciais.categorias[0].videos[0].url}
+          videoDescription="O que é Front-End ? Trabalhando na área."
         />
 
         <Carousel
@@ -26,21 +26,21 @@ function Home() {
 
         <Carousel
           category={dadosIniciais.categorias[2]}
-        />      
+        />
 
         <Carousel
           category={dadosIniciais.categorias[3]}
-        />      
+        />
 
         <Carousel
           category={dadosIniciais.categorias[4]}
-        />      
+        />
 
         <Carousel
           category={dadosIniciais.categorias[5]}
         />
       </PageDefault>
-    </div> 
+    </div>
   );
 }
 

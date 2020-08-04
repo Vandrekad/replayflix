@@ -1,0 +1,16 @@
+{
+    "categorias" : [
+        {
+            "id": 1,
+            "nome": "Maravilhas da vida moderna",
+            "descricao": "Tudo de bom que a vida moderna pode oferecer",
+            "cor": "#3fc"
+        },
+        {
+            "id": 2,
+            "nome": "Maravilhas da vida urbana",
+            "descricao": "Tcadadas",
+            "cor": "#30fd"
+        }
+    ]
+}
