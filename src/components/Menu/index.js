@@ -16,7 +16,7 @@ function Menu() {
       </Link>
 
       {
-        URL_BACKEND != 'https://replayflix.vercel.app/cadastro/video' && (
+        URL_BACKEND !== 'https://replayflix.vercel.app/cadastro/video' && (
           <Button as={Link} className="ButtonLink" to="/cadastro/video">
             Vídeo Novo
           </Button>
