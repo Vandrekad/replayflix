@@ -9,6 +9,8 @@ const Main = styled.main`
     background-color: var(--black);
     color: var(--white);
     flex:1;
+    display: flex;
+    flex-direction: column;
     width: 100vw
 `;
 

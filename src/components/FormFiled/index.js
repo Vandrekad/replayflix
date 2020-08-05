@@ -3,20 +3,20 @@ import PropTypes from 'prop-types';
 import { TextField } from '@material-ui/core';
 
 function FormField({
-  placeholder, type, value, name, onChange, multline,
+  placeholder, type, value, name, onChange, multline, required,
 }) {
   return (
-    <div>
+    <div style={{ alignSelf: 'center', width: '100%' }}>
       <TextField
         style={{
-          width: 300, borderRadius: 10, background: '#fff', marginBottom: 20,
+          width: '100%', borderRadius: 10, background: '#fff', marginBottom: 20,
         }}
         autoComplete="off"
         label={placeholder}
         type={type}
         name={name}
         rows="4"
-        required
+        required={required}
         multiline={multline}
         value={value}
         onChange={onChange}
@@ -32,6 +32,7 @@ FormField.defaultProps = {
   value: '',
   onChange: () => {},
   multline: false,
+  required: false,
 };
 
 FormField.propTypes = {
@@ -41,6 +42,7 @@ FormField.propTypes = {
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func,
   multline: PropTypes.bool,
+  required: PropTypes.bool,
 };
 
 export default FormField;

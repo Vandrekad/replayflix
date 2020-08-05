@@ -109,86 +109,91 @@ function CadastroCategoria() {
         <h1 style={{ marginLeft: 20 }}>Cadastro de Categoria: </h1>
 
         <div style={{
-          flexDirection: window.innerWidth < 500 ? 'column' : 'row', display: 'flex', width: '100%', alignItems: 'center',
+          flexDirection: window.innerWidth < 500 ? 'column' : 'row', display: 'flex', width: '100%',
         }}
         >
           <div style={{ width: window.innerWidth < 500 ? '100%' : '50%', flexDirection: 'column' }}>
-            <form
-              style={{ marginBottom: 20, textAlign: window.innerWidth < 500 ? 'center' : 'left' }}
-              onSubmit={function handleSubmit(infoDoEvento) {
-                infoDoEvento.preventDefault();
-                setCategorias([
-                  ...categorias,
-                  values,
-                ]);
+            <div style={{ width: '80%', margin: 'auto' }}>
+              <form
+                style={{
+                  marginBottom: 20,
+                }}
+                onSubmit={function handleSubmit(infoDoEvento) {
+                  infoDoEvento.preventDefault();
+                  setCategorias([
+                    ...categorias,
+                    values,
+                  ]);
 
-                createCategory(newObject);
+                  createCategory(newObject);
 
-                clearForm();
-              }}
-            >
-              <FormField
-                placeholder="Categoria"
-                type="text"
-                name="titulo"
-                value={values.titulo}
-                onChange={handleChange}
-              />
+                  clearForm();
+                }}
+              >
+                <FormField
+                  placeholder="Categoria"
+                  type="text"
+                  name="titulo"
+                  required
+                  value={values.titulo}
+                  onChange={handleChange}
+                />
 
-              <FormField
-                placeholder="Descrição"
-                type="text"
-                multline
-                name="descricao"
-                value={values.descricao}
-                onChange={handleChange}
-              />
+                <FormField
+                  placeholder="Descrição"
+                  type="text"
+                  multline
+                  name="descricao"
+                  value={values.descricao}
+                  onChange={handleChange}
+                />
 
-              <FormField
-                placeholder="Cor"
-                type="color"
-                name="cor"
-                value={values.cor}
-                onChange={handleChange}
-              />
+                <FormField
+                  placeholder="Cor"
+                  type="color"
+                  name="cor"
+                  value={values.cor}
+                  onChange={handleChange}
+                />
 
-              <div style={{ flexDirection: 'row', display: 'flex', justifyContent: window.innerWidth < 500 ? 'center' : 'left' }}>
-                {methodControl
-                  ? (
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      style={{ borderRadius: 15 }}
-                      onClick={() => {
-                        EditCategory(values.id);
-                      }}
-                    >
-                      Editar
-                    </Button>
-                  )
-                  : (
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      style={{ borderRadius: 15 }}
-                      type="submit"
-                    >
-                      Cadastrar
-                    </Button>
-                  )}
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  style={{ borderRadius: 15, marginLeft: 10 }}
-                  onClick={() => {
-                    clearForm(valoresIniciais);
-                    setMethodControl(false);
-                  }}
-                >
-                  Limpar
-                </Button>
-              </div>
-            </form>
+                <div style={{ flexDirection: 'row', display: 'flex', justifyContent: window.innerWidth < 500 ? 'center' : 'left' }}>
+                  {methodControl
+                    ? (
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        style={{ borderRadius: 15 }}
+                        onClick={() => {
+                          EditCategory(values.id);
+                        }}
+                      >
+                        Editar
+                      </Button>
+                    )
+                    : (
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        style={{ borderRadius: 15 }}
+                        type="submit"
+                      >
+                        Cadastrar
+                      </Button>
+                    )}
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    style={{ borderRadius: 15, marginLeft: 10 }}
+                    onClick={() => {
+                      clearForm(valoresIniciais);
+                      setMethodControl(false);
+                    }}
+                  >
+                    Limpar
+                  </Button>
+                </div>
+              </form>
+            </div>
 
             {
               window.innerWidth < 500 && (
