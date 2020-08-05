@@ -7,15 +7,21 @@ import './Menu.css';
 import Button from '../Button';
 
 function Menu() {
+  const URL_BACKEND = window.location.hostname;
+
   return (
     <nav className="Menu">
       <Link to="/">
         <img className="Logo" src={Logo} alt="ReplayFlix Imagem" />
       </Link>
 
-      <Button as={Link} className="ButtonLink" to="/cadastro/video">
-        Vídeo Novo
-      </Button>
+      {
+        URL_BACKEND != 'https://replayflix.vercel.app/cadastro/video' && (
+          <Button as={Link} className="ButtonLink" to="/cadastro/video">
+            Vídeo Novo
+          </Button>
+        )
+      }
     </nav>
   );
 }
