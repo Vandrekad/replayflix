@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link/* , useHistory */ } from 'react-router-dom';
 import {
   Button, Select, MenuItem, FormControl, InputLabel,
 } from '@material-ui/core';
@@ -10,7 +10,7 @@ import videosRepositories from '../../../repositories/videos';
 import categorieRepositories from '../../../repositories/categorias';
 
 function CadastroVideo() {
-  const history = useHistory();
+  /* const history = useHistory(); */
   const [categorias, setCategorias] = useState([]);
   const { handleChange, values } = useForm({
     titulo: '',
@@ -50,7 +50,7 @@ function CadastroVideo() {
                 categoriaId: categoriaEscolhida.id,
               })
                 .then(() => {
-                  history.push('/');
+                  /* history.push('/'); */
                 });
             }}
           >
