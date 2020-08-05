@@ -9,8 +9,9 @@ function FormField({
     <div>
       <TextField
         style={{
-          background: '#fff', width: 400, borderRadius: 10, marginBottom: 20, marginLeft: 20,
+          width: 300, borderRadius: 10, background: '#fff', marginBottom: 20,
         }}
+        autoComplete="off"
         label={placeholder}
         type={type}
         name={name}
@@ -19,6 +20,7 @@ function FormField({
         multiline={multline}
         value={value}
         onChange={onChange}
+        onSelect={onChange}
         variant="filled"
       />
     </div>

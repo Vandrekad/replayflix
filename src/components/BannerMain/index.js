@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from '@material-ui/core';
 import VideoIframeResponsive from './components/VideoIframeResponsive';
 import { BannerMainContainer, ContentAreaContainer, WatchButton } from './styles';
 
@@ -38,6 +39,9 @@ export default function BannerMain({
           <WatchButton>
             Assistir
           </WatchButton>
+          <Button variant="contained">
+            X
+          </Button>
         </ContentAreaContainer.Item>
       </ContentAreaContainer>
     </BannerMainContainer>

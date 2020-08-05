@@ -1,16 +1,18 @@
 {
-    "categorias" : [
-        {
-            "id": 1,
-            "nome": "Maravilhas da vida moderna",
-            "descricao": "Tudo de bom que a vida moderna pode oferecer",
-            "cor": "#3fc"
-        },
-        {
-            "id": 2,
-            "nome": "Maravilhas da vida urbana",
-            "descricao": "Tcadadas",
-            "cor": "#30fd"
-        }
-    ]
+  "categorias": [
+    {
+      "titulo": "Videos engraçados",
+      "descricao": "Melhores vídeos shitpost de LOL",
+      "cor": "#9ecf2a",
+      "id": 2
+    }
+  ],
+  "videos": [
+    {
+      "titulo": "Lillia a faunesa TIMIDA",
+      "url": "https://youtu.be/jRN1tqd4PFY",
+      "categoriaId": 2,
+      "id": 1
+    }
+  ]
 }

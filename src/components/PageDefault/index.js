@@ -9,8 +9,7 @@ const Main = styled.main`
     background-color: var(--black);
     color: var(--white);
     flex:1;
-    padding-top:30px;
-    padding-left: 20px;
+    width: 100vw
 `;
 
 function PageDefault({ children }) {
@@ -30,6 +29,7 @@ PageDefault.defaultProps = {
 };
 
 PageDefault.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
   children: PropTypes.array,
 };
 
