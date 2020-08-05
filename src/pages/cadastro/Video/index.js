@@ -12,7 +12,7 @@ import categorieRepositories from '../../../repositories/categorias';
 function CadastroVideo() {
   /* const history = useHistory(); */
   const [categorias, setCategorias] = useState([]);
-  const { handleChange, values } = useForm({
+  const { handleChange, values, clearForm } = useForm({
     titulo: '',
     url: '',
     categoria: '',
@@ -51,6 +51,7 @@ function CadastroVideo() {
               })
                 .then(() => {
                   /* history.push('/'); */
+                  clearForm();
                 });
             }}
           >
