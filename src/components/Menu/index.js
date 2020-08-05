@@ -7,7 +7,9 @@ import './Menu.css';
 import Button from '../Button';
 
 function Menu() {
-  const URL_BACKEND = window.location.hostname;
+  const URL_PAGE = `${window.location.protocol}${
+    window.location.host}${
+    window.location.pathname}`;
 
   return (
     <nav className="Menu">
@@ -16,7 +18,8 @@ function Menu() {
       </Link>
 
       {
-        URL_BACKEND != 'https://replayflix.vercel.app/cadastro/video' && (
+        URL_PAGE !== `${window.location.protocol}${
+          window.location.host}/cadastro/video` && (
           <Button as={Link} className="ButtonLink" to="/cadastro/video">
             Vídeo Novo
           </Button>
